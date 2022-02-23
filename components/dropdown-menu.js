@@ -1,17 +1,35 @@
-function createDropdownMenu(paramObj) {
-	// target element, menu title, menu items with title and url
-	const menuToggle = document.createElement('button');
-	menuToggle.textContent = paramObj.menuTitle;
-	const menuList = document.createElement('ul');
+const createDropdownMenu = ({ menuTitle, menuItems }) => {
+	const render = () => {
+		const dropdown = document.createElement('div');
+		dropdown.classList.add('dropdown');
 
-	paramObj.menuItems.forEach((item) => {
-		const menuLi = document.createElement('li');
-		menuLi.textContent = item.title;
-		menuLi.setAttribute('href', item.url);
-		menuList.appendChild(menuLi);
-	});
+		const dropdownButton = document.createElement('button');
+		dropdownButton.classList.add('dropdown-button');
 
-	return paramObj;
-}
+		dropdownButton.textContent = menuTitle;
+		dropdownButton.setAttribute('id', menuTitle);
+		dropdown.appendChild(dropdownButton);
+
+		const dropdownList = document.createElement('ul');
+		dropdownList.classList.add('dropdown-list');
+
+		dropdown.appendChild(dropdownList);
+
+		menuItems.forEach((item) => {
+			const dropdownLi = document.createElement('li');
+			const a = document.createElement('a');
+			a.textContent = item.title;
+			a.setAttribute('href', item.url);
+			dropdownLi.appendChild(a);
+			dropdownList.appendChild(dropdownLi);
+		});
+
+		return dropdown;
+	};
+
+	return {
+		render,
+	};
+};
 
 export default createDropdownMenu;
