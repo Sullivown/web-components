@@ -1,5 +1,15 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+	margin: 0;
+}
+
 /*===================*/
-/*  Dropdown Styles  */
+/*     Dropdown      */
 /*===================*/
 .dropdown {
 	display: inline-block;
@@ -26,6 +36,7 @@
 	margin-block-end: 0px;
 	padding-inline-start: 0px;
 	transition: opacity 500ms ease-in-out;
+	z-index: 1;
 }
 
 .dropdown-list li {
@@ -49,4 +60,30 @@
 .dropdown:hover .dropdown-list {
 	visibility: visible;
 	opacity: 1;
+}
+
+/*===================*/
+/*   Image Slider    */
+/*===================*/
+.image-slider {
+	height: 100%;
+	width: 100%;
+	padding: 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-size: cover;
+	background-position: center;
+	transition: background-image 400ms ease-in-out;
+}
+
+.image-slider > button {
+	padding: 2rem;
+	border-radius: 20%;
+	border: none;
+	opacity: 0.4;
+}
+
+.image-slider > button:hover {
+	opacity: 0.8;
 }

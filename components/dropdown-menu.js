@@ -1,4 +1,4 @@
-const createDropdownMenu = ({ menuTitle, menuItems }) => {
+const CreateDropdownMenu = ({ menuTitle, menuItems }) => {
 	const render = () => {
 		const dropdown = document.createElement('div');
 		dropdown.classList.add('dropdown');
@@ -32,4 +32,4 @@ const createDropdownMenu = ({ menuTitle, menuItems }) => {
 	};
 };
 
-export default createDropdownMenu;
+export default CreateDropdownMenu;
