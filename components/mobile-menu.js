@@ -7,7 +7,7 @@ const CreateMobileMenu = ({ id, menuItems }) => {
 			`#${event.target.parentNode.parentNode.id}`
 		).firstChild;
 		const buttons = menuBar.querySelectorAll('.mobile-menu-button');
-		const toggleButton = menuBar.querySelector('.mobile-menu-toggle');
+		const toggleButton = menuBar.querySelector('button');
 
 		if (state === 'closed') {
 			buttons.forEach((button) => {
@@ -15,7 +15,7 @@ const CreateMobileMenu = ({ id, menuItems }) => {
 				navButton.style.visibility = 'visible';
 				navButton.style.opacity = 1;
 			});
-			toggleButton.textContent = '-';
+			toggleButton.textContent = 'X';
 			menuBar.style.backgroundColor = 'rgba(240, 109, 6, 1)';
 
 			state = 'open';
@@ -54,8 +54,9 @@ const CreateMobileMenu = ({ id, menuItems }) => {
 				mobileMenuBar.appendChild(toggleButton);
 			}
 
-			const button = document.createElement('button');
+			const button = document.createElement('a');
 			button.classList.add('mobile-menu-button');
+			button.setAttribute('href', item.url);
 			button.textContent = item.title;
 			button.style.visibility = 'hidden';
 			mobileMenuBar.appendChild(button);
