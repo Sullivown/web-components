@@ -143,6 +143,7 @@ nav {
 	border: none;
 	padding: 1rem;
 	font-size: 2rem;
+	cursor: pointer;
 }
 
 .mobile-menu-button {
