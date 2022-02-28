@@ -43,3 +43,7 @@ body.appendChild(mobileMenu1.render());
 nav.appendChild(dropDown1.render());
 nav.appendChild(dropDown2.render());
 hero.appendChild(slider1.render());
+
+exports.CreateDropdownMenu = CreateDropdownMenu;
+exports.CreateMobileMenu = CreateMobileMenu;
+exports.CreateImageSlider = CreateImageSlider;
