@@ -1,3 +1,5 @@
+import '../styles.css';
+
 const CreateImageSlider = ({ id, images }) => {
 	let currentImage = 0;
 	const totalImages = images.length;

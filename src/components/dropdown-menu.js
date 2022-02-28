@@ -1,3 +1,5 @@
+import '../styles.css';
+
 const CreateDropdownMenu = ({ menuTitle, menuItems }) => {
 	const render = () => {
 		const dropdown = document.createElement('div');

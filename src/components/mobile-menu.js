@@ -1,3 +1,5 @@
+import '../styles.css';
+
 const CreateMobileMenu = ({ id, menuItems }) => {
 	let state = 'closed';
 	const totalItems = menuItems.length;
