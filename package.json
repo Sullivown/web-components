@@ -1,6 +1,6 @@
 {
 	"name": "web-components-sullivown",
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"description": "A small library of reusable front-end website components",
 	"main": "dist/main.js",
 	"scripts": {

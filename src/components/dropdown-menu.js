@@ -1,5 +1,6 @@
 import '../styles.css';
 
+// Accepts an object with the menu title (displayed on the menu toggle/button) and an array of menu items. Menu items have title and url properties.
 const CreateDropdownMenu = ({ menuTitle, menuItems }) => {
 	const render = () => {
 		const dropdown = document.createElement('div');

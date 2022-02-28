@@ -1,5 +1,6 @@
 import '../styles.css';
 
+// Accepts an ID for the component and an array of objects, each with title and url properties.
 const CreateMobileMenu = ({ id, menuItems }) => {
 	let state = 'closed';
 	const totalItems = menuItems.length;

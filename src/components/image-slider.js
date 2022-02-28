@@ -1,5 +1,6 @@
 import '../styles.css';
 
+// Accepts the ID of the component (must be unique) and an array of images
 const CreateImageSlider = ({ id, images }) => {
 	let currentImage = 0;
 	const totalImages = images.length;
